@@ -18,21 +18,25 @@ The Kaggle score improved from 1.80291 to 0.53349, showing that the model better
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
 With tuning, the score improved to 0.48491. Tuning helped the model generalize better by optimizing learning rate and model complexity.
+With hyperparameter tuning, the score improved from 0.53349 to 0.48491. The tuning helped the model generalize better by optimizing key parameters affecting learning complexity. The three hyperparameters tuned were:
+• learning_rate: Lowered to 0.05 to make the model learn more gradually and reducing the risk of overfitting.
+• num_boost_round: Increased to 150 to give the model more opportunities to improve during training.
+• num_leaves: Set to 6 to control model complexity and avoid overfitting to noise.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
 I would explore time series modeling techniques and combine registered/casual counts separately.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
-|--|--|--|--|--|
-|initial|-|-|-|1.80291|
-|add_features|-|-|-|0.53349|
-|hpo|0.05|6|150|0.48491|
+| model         | hpo1  | hpo2  | hpo3  | score   |
+|---------------|-------|-------|-------|---------|
+| initial       | -     | -     | -     | 1.80291 |
+| add_features  | -     | -     | -     | 0.53349 |
+| hpo           | 0.05  | 6     | 150   | 0.48491 |
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
 TODO: Replace the image below with your own.
-
+![val_rmse_by_model.png](img/val_rmse_by_model.png)
 ![model_train_score.png](img/model_train_score.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
